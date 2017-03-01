@@ -41,6 +41,10 @@ public class AWSS3Mojo extends AbstractMojo {
 
     private AmazonS3 s3Client;
 
+    public AWSS3Mojo() {
+
+    }
+
     protected AWSS3Mojo(AmazonS3 s3Client) {
         this.s3Client = s3Client;
     }

@@ -13,6 +13,14 @@ public class S3ObjectTest {
         AWSS3Mojo.registerS3ProtocolHandler();
     }
 
+    /**
+     * Maven MOJOs need to have public constructors with zero arguments
+     */
+    @Test
+    public void testHasPublicConstructor() {
+        new AWSS3Mojo();
+    }
+
     @Test
     public void isDirectory() throws Exception {
         assertTrue(S3Object.isDirectory("some/directory/"));
